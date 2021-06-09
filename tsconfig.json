@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    // "lib": [
+    //   "dom",
+    //   "dom.iterable",
+    //   "esnext"
+    // ],
+    "module": "none",
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "outFile": "./dist/app.js",
+  },
+  "exclude": ["node_modules"],
+  "include": [
+    "src"
+  ]
+}

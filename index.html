@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <h2>hello world</h2>
+    <div style="display: flex;">
+        <canvas style="border:1px solid black; margin-right: 1.4rem;" id="canvas" width=500 height=300></canvas>
+
+        <div>
+            <div>
+                <button onclick="pause()">play | pause</button>
+                <button id="test">test sound</button>
+            </div>
+            <div style="margin-bottom: 0.8rem;">
+                <select id="func_select" onchange="onSelectMathFunc(this.value)">
+                    <option>sin</option>
+                    <option>square</option>
+                    <option>cos</option>
+                    <option>tan</option>
+                    <option>saw</option>
+                </select>
+                <input id="rangec" type="range" min="1" max="360"/>
+                <span id="range_value"></span>
+            </div>
+        </div>
+    </div>
+    <script src="dist/app.js"></script>
+</body>
+</html>

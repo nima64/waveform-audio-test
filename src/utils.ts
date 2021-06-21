@@ -1,4 +1,3 @@
-
 /** if b > a return 1 else returns 0 */
 function step(a:number,b:number){
     return  b > a ? 1.0 : 0;   

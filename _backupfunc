@@ -1,0 +1,35 @@
+function applyFtoX( x:number, f:(a:number) => number ) : number {
+    let y = f(Math.PI*2/xscale * (x % xscale));
+    return y;
+}
+
+function draw_FX(){
+    let yoffset = 150;
+    let r = 50;
+    //let x = 0;
+    let _dir = draw_dir * canvas.width;
+
+    ctx.beginPath();
+    for (let i =0; i < canvas.width; i++){
+        let x = i + timer;
+        // let y = Math.sin(( (x) %360) * 0.0174533);
+        // let y2 = f(( (xscale*x) + xscale)%360 * 0.0174533);
+        //let [y,y2] = applyFtoX_Iter(x,lookUpFunc);
+
+        // let y = applyFtoX( x, lookUpFunc );
+        
+        // if (i == 0){
+        //     ctx.moveTo(_dir - i, y*r + yoffset);
+        // }else{
+        //     ctx.lineTo(_dir - i, y*r + yoffset);
+        draw_func(i,x,130,FuncLookup["saw"]);
+        draw_func(i,x,100,FuncLookup["cos"]);
+        // }
+        //ctx.moveTo(_dir - i, 0 - y*r + yoffset);
+        // ctx.lineTo(_dir - (i+1), 0 - y2*r + yoffset);
+    }
+    //ctx.strokeStyle = "#000000";
+     ctx.stroke();
+     ctx.closePath();
+
+}

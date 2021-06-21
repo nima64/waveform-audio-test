@@ -7,25 +7,40 @@
     <title>Document</title>
 </head>
 <body >
-    <h2>hello world</h2>
     <div style="display: flex;">
         <canvas style="border:1px solid black; margin-right: 1.4rem;" id="canvas" width=500 height=300></canvas>
 
         <div>
             <div>
                 <button onclick="pause()">play | pause</button>
+                <div style="margin: 10px 0px;">
+                    <span style="margin-right: 10px;">volume</span><input id="volume_slider" type="range" value="50" step="1" min="1" max="100"/> 
+                </div>
+                <div style="margin: 10px 0px;">
+                    <span style="margin-right: 10px;">duration</span><input id="volume_slider" type="number" value="50" step="1" min="0.1" /> 
+                </div>
                 <button id="test">test sound</button>
             </div>
-            <div style="margin-bottom: 0.8rem;">
-                <select id="func_select" onchange="onSelectMathFunc(this.value)">
+            <div style="display:flex; margin: 10px 0;">
+                <select style="margin-right: 10px;" id="func_select" onchange="onSelectMathFunc(this.value)">
                     <option>sin</option>
                     <option>square</option>
                     <option>cos</option>
                     <option>tan</option>
                     <option>saw</option>
                 </select>
-                <input id="rangec" type="range" min="1" max="360"/>
-                <span id="range_value"></span>
+                <div><span>Frequency</span> <input id="rangec" type="range" value="200" min="1" max="360"/> <span id="range_value"></span></div>
+            </div>
+            <div>
+                <div>
+                    <label>Enter custom function</label>
+                    <div>
+                        <label>ex: (x) => Math.sin(x) </label>
+                    </div>
+                    
+                    <textarea id="fx"></textarea>
+                </div>
+                <button id="addFX">add</button>
             </div>
         </div>
     </div>
